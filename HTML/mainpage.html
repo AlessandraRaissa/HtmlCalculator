@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/design.css">
+    <script src="/JS/calcula.js"></script>
     <title>Calculadora</title>
 </head>
 <body>
-    <section>
-        <fieldset>
-            <form action="">
+    <header>
+        <div class="mode">
+            <div id="light" class="light" onclick="lightMode()">
+                <h3>Light</h3>
+                <img src="/IMG/520994.png" alt="">
+            </div>
+            <div id="dark" class="dark" onclick="darkMode()">
+                <h3>Dark</h3>
+                <img src="/IMG/unnamed.png" alt="">
+            </div>
+        </div>
+        <section class="text">
+            <h1>CALCULATOR</h1>
+        </section>
+        <section class="form">
+            <form action="mainpage.html" method="post" name="calc">
                 <div>
                     <label for="val1">Valor 1:</label>
                     <input type="text" id="val1" name="val1" required>
                 </div>
+                <br>
                 <div>
                     <label for="val2">Valor 2:</label>
                     <input type="text" id="val2" name="val2" required>
                 </div>
+                <br>
                 <div>
                     <label for="opera">Operação:</label>
                     <select name="opera" id="opera">
@@ -27,12 +43,27 @@
                         <option value="*">*</option>
                         <option value="/">/</option>
                     </select>
-                    <input type="submit" value="Calcular" onclick="calculo();">
+                    <input type="submit" value="Calcular" onclick=" return calculo();">
                 </div>
             </form>
-        </fieldset>
-        
-    </section>
-    <script src="/JS/calcula.js"></script>
+        </section>
+        <div id="alert">
+            <h1>Informe seu nome</h1>
+            <section class="form">
+                <form action="mainpage.html" method="post" name="nam">
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="Enviar" onclick=" return nameVal();">
+                    </div>
+                </form>
+            </section>
+        </div>
+    
+    </header>
+
 </body>
 </html>
